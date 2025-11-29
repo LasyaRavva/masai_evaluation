@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <header class ="navbar">
+        <h1>Fleet Dashboard</h1>
+        <div class = "navbar-filters">
+            <label for="categoryFilter" style="color: #ccc; font-size: 0.9em; ">Category:</label>
+            <select id ="categoryFilter">
+            <option value ="">All Categories</option>
+            <option value ="Car">Car</option>
+            <option value ="Bus">Bus</option>
+            <option value ="Auto">Auto</option>
+            <option value ="Truck">Truck</option>
+        </select>
+        <label for = "availabiltyFilter" style = "color: #ccc; font-size: 0.9em;">Availabilty:</label>
+        <select id ="availabiltyFilter">
+            <option value="">All Availabilty</option>
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+        </select>
+        <button id ="clearFilterBtn">Clear Filters</button>
+        </div>
+    </header>
+
+    <div class ="container">
+        <aside class ="sidebar">
+            <h3>Add New Fleet Vechicle</h3>
+            <form id ="addFleetForm" class ="fleet-form">
+                <label for = "regNo">Reg No : of vehicle(Required): </label>
+                <input type ="text" id ="regNo" placeholder ="e.g., MH-01-A-1001" required>
+                <label for ="category">Category(Required):</label>
+                <select id ="category" required>
+                    <option value ="">All Categories</option>
+                    <option value ="Car">Car</option>
+                    <option value ="Bus">Bus</option>
+                    <option value ="Auto">Auto</option>
+                    <option value ="Truck">Truck</option>
+                </select>
+                <label for ="text" id ="driverName">Driver Name(Required):</label>
+                <input type="text" id ="driverName" placeholder="Full Name" required>
+                
+                <label for ="isAvailable">Availabilty:</label>
+                <select id ="availabiltyFilter">
+                    <option value="">All Availabilty</option>
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+
+                <button type="submit">Add Fleet</button>
+
+            </form>
+        </aside>
+        <main class ="main-content">
+            <h2>Current Fleet</h2>
+            <div id ="fleetCardsContainer">
+
+            </div>
+        </main>
+    </div>
+    <script src ="admin.js"></script>
+</body>
+</html>
